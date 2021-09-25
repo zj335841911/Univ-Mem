@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:checkableBehavior="single"
+   android:background="@color/editactivity_edit_cursor">
+    <item
+        android:id="@+id/nav_right_all"
+        android:icon="@drawable/univ_mem_icon_head_all"
+        android:title="@string/nav_right_all_notes" />
+    <item
+        android:id="@+id/nav_right_work"
+        android:icon="@drawable/univ_mem_icon_head_work"
+        android:title="@string/nav_right_work_notes" />
+    <item
+        android:id="@+id/nav_right_study"
+        android:icon="@drawable/univ_mem_icon_head_study"
+        android:title="@string/nav_right_study_notes" />
+    <item
+        android:id="@+id/nav_right_life"
+        android:icon="@drawable/univ_mem_icon_head_life"
+        android:title="@string/nav_right_life_notes" />
+    <item
+    android:id="@+id/nav_right_nogroup"
+    android:icon="@drawable/univ_mem_icon_head_unclassed"
+    android:title="@string/nav_right_no_group_notes" />
+    <item
+        android:id="@+id/nav_right_nodo"
+        android:icon="@drawable/univ_mem_icon_head_go"
+        android:title="@string/nav_right_nodo_notes" />
+</group>
+</menu>

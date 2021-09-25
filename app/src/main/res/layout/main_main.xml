@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainActivity_drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.univ_mem.MainActivity">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/mainActivity_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:layout_scrollFlags="scroll|snap|enterAlways"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+                <TextView
+                    android:id="@+id/mainActivity_toolbar_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:singleLine="true"
+                    android:text="全部笔记"
+                    android:textColor="@color/orange"
+                    android:textSize="15sp" />
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mainActivity_receclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mainActivity_floatingActionCourse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/univ_mem_main_floating_course"
+            android:backgroundTint="#dd3ac764"
+            app:rippleColor="#dd3ac764"
+            android:layout_gravity="bottom|end"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mainActivity_floatingActionJoke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/univ_mem_main_floating_news"
+            android:backgroundTint="#dd3ac764"
+            app:rippleColor="#dd3ac764"
+            android:layout_gravity="bottom|end"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mainActivity_floatingActionWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/univ_mem_main_floating_word"
+            android:backgroundTint="#dd3ac764"
+            app:rippleColor="#dd3ac764"
+            android:layout_gravity="bottom|end"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mainActivity_floatingActionNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/univ_mem_main_floating_note"
+            android:backgroundTint="#dd3ac764"
+            app:rippleColor="#dd3ac764"
+            android:layout_gravity="bottom|end"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/mainActivity_floatingActionTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:src="@drawable/univ_mem_main_floating_op"
+            android:backgroundTint="#dd3ac764"
+            app:rippleColor="#dd3ac764"
+            android:layout_gravity="bottom|end"/>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/mainActivity_navigation_left"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/main_navigation_left_menu" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/mainActivity_navigation_right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        app:menu="@menu/navigation_right_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>

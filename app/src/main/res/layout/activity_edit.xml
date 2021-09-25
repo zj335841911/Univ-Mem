@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/editActivity_relativeLayout">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/editActivity_appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/editActivity_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary">
+            <TextView
+                android:id="@+id/editActivity_toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="15sp" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/editActivity_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/editActivity_appBarLayout">
+
+        <io.github.mthli.knife.KnifeText
+            android:id="@+id/editActivity_knifeText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:background="@null"
+            android:textCursorDrawable="@drawable/univ_mem_edittext_cursor"
+            android:textSize="15sp" />
+        <!--在EditText父级控件中设置，使得EditText进入页面不获得焦点，编辑时才获得焦点-->
+        <!--android:textCursorDrawable=""-->
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
